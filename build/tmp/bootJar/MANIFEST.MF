@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Start-Class: com.emc.education.usermanagement.TodoManagementSpringBoot
- 2Application
-Main-Class: org.springframework.boot.loader.JarLauncher
-
