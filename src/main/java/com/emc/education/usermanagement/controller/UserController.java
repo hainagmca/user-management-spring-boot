@@ -41,6 +41,13 @@ public class UserController {
         return "list-users";
     }
 
+    @RequestMapping(value="/list-assignments", method = RequestMethod.GET)
+    public String showAssignments(ModelMap model){
+        String name = getLoggedInUserName(model);
+        model.put("assignmentsPojo", userService.retrieveAssignments(name));
+        return "PivotalEducation";
+    }
+
     private String getLoggedInUserName(ModelMap model) {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 

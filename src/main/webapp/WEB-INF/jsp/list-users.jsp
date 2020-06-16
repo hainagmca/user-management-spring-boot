@@ -8,11 +8,12 @@
 	<br>
 	<div class="panel panel-primary">
 		<div class="panel-heading">
-			<h3>List of Users</h3>
+			List of Users
 		</div>
-		<div class="panel-body">
-			<table class="table table-striped">
-				<thead>
+
+		<div class="table-wrapper-scroll-y my-custom-scrollbar">
+			 <table class="table table-bordered table-striped mb-0">
+		    	<thead>
 					<tr>
 					    <th width="20%">Name</th>
 						<th width="30%">Email</th>

@@ -1,5 +1,6 @@
 package com.emc.education.usermanagement.service;
 
+import com.emc.education.usermanagement.model.AssignmentsPojo;
 import com.emc.education.usermanagement.model.User;
 
 import java.util.Date;
@@ -21,4 +22,5 @@ public interface IUserService {
 
     void saveUser(User todo);
 
+    AssignmentsPojo retrieveAssignments(String name);
 }
