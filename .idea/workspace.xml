@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff79542a-7807-4cf0-8ace-0be90d9e394b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/model/AssignmentsPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/checkmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/user-avatar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/wrong-cross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/analytics.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/assignments-min.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/clipboard.min.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/usermenu-min.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/PivotalEducation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/todo-management-spring-boot-master.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/controller/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emc/education/usermanagement/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/navigation.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/navigation.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/list-users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/list-users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,9 +178,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="499" y="144" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1592329906685" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592332037817">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592334430786">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592332037817" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592334430786" />
   </component>
 </project>

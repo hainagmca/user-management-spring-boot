@@ -5,7 +5,7 @@ plugins {
     id 'java'
 }
 
-group = 'net.guides.springboot'
+group = 'com.emc.education'
 version = '0.0.1-SNAPSHOT'
 description = 'user-management-spring-boot'
 sourceCompatibility = '1.8'
