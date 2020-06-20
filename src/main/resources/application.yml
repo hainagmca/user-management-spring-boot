@@ -1,0 +1,33 @@
+server:
+  port : 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/users_database?useSSL=false
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: a44d0d05cff46ed16a77
+            client-secret: 4777d838bdc9a7ade4bc004c98f93c3b276ae00b
+          okta:
+            client-id: 0oajicp5bk5T7HS6G0h7
+            client-secret: Lg1oFKftm1eYeTlFteIBF0bdR0l1iT1tAdctvADm
+        provider:
+          okta:
+            authorization-uri: https://dev-533919.oktapreview.com/oauth2/v1/authorize
+            token-uri: https://dev-533919.oktapreview.com/oauth2/v1/token
+            user-info-uri: https://dev-533919.oktapreview.com/oauth2/v1/userinfo
+            jwk-set-uri: https://dev-533919.oktapreview.com/oauth2/v1/keys
+

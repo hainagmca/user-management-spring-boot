@@ -19,6 +19,11 @@ public class UserService implements IUserService {
     private UserRepository userRepository;
 
     @Override
+    public List<User> getUsers() {
+        return userRepository.findAll();
+    }
+
+    @Override
     public List<User> getUsersByUser(String user) {
         return userRepository.findByUserName(user);
     }
@@ -58,7 +63,7 @@ public class UserService implements IUserService {
     public AssignmentsPojo retrieveAssignments(String name) {
         AssignmentsPojo assignmentsPojo = new AssignmentsPojo();
         assignmentsPojo.setPageTitile("Assignments");
-        assignmentsPojo.setBatchName("APJ-Wipro Online");
+        assignmentsPojo.setBatchName("APJ-Wipro Online fdsfa dfa dsf ");
         assignmentsPojo.setStudentCount(10);
 
         Student s1 = new Student(1,"User 1 (Nagendra.chunduru@dell.com) " , "na", "no", "no", "yes", "yes", "yes",  "yes", "yes", "yes", "yes","yes",  "yes", "na", "na", "na", "no");

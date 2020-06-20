@@ -2,6 +2,7 @@ package com.emc.education.usermanagement.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -37,11 +39,14 @@ public class UserController {
     @RequestMapping(value = "/list-users", method = RequestMethod.GET)
     public String showUsers(ModelMap model) {
         String name = getLoggedInUserName(model);
-        model.put("users", userService.getUsersByUser(name));
+        // This will filter by logged in user name ......
+        // model.put("users", userService.getUsersByUser(name));
+
+        model.put("users", userService.getUsers());
         return "list-users";
     }
 
-    @RequestMapping(value="/list-assignments", method = RequestMethod.GET)
+    @RequestMapping(value="/user-assignments", method = RequestMethod.GET)
     public String showAssignments(ModelMap model){
         String name = getLoggedInUserName(model);
         model.put("assignmentsPojo", userService.retrieveAssignments(name));
@@ -53,6 +58,14 @@ public class UserController {
 
         if (principal instanceof UserDetails) {
             return ((UserDetails) principal).getUsername();
+        }
+
+        if( principal instanceof DefaultOAuth2User) {
+            DefaultOAuth2User user = (DefaultOAuth2User) principal;
+            Map map = user.getAttributes();
+            System.out.println("Logged in user id: "+map.get("login"));
+            System.out.println("Logged in user Name: "+map.get("name"));
+            return (String) map.get("name");
         }
 
         return principal.toString();

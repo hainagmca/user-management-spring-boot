@@ -1,70 +1,61 @@
-
 plugins {
-    id 'org.springframework.boot' version '2.0.4.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
     id 'java'
 }
+
+apply plugin: 'io.spring.dependency-management'
 
 group = 'com.emc.education'
 version = '0.0.1-SNAPSHOT'
 description = 'user-management-spring-boot'
 sourceCompatibility = '1.8'
 
-configurations {
-    developmentOnly
-    runtimeClasspath {
-        extendsFrom developmentOnly
-    }
-}
 
 repositories {
-    mavenLocal()
+    mavenCentral()
 }
+
 /*
 dependencies {
-    compile 'javax.servlet:jstl:1.2'
-    compile 'org.webjars:bootstrap:3.3.6'
-    compile 'org.webjars:bootstrap-datepicker:1.0.1'
-    compile 'org.webjars:jquery:1.9.1'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.0.4.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-security:2.0.4.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-web:2.0.4.RELEASE'
-    runtime 'org.springframework.boot:spring-boot-devtools:2.0.4.RELEASE'
-    runtime 'mysql:mysql-connector-java:5.1.46'
-    testCompile 'org.springframework.boot:spring-boot-starter-test:2.0.4.RELEASE'
-    testCompile 'org.springframework.security:spring-security-test:5.0po.7.RELEASE'
-    compileOnly 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.32'
-}*/
+    implementation 'javax.servlet:jstl'
+    implementation 'org.webjars:bootstrap:3.3.6'
+    implementation 'org.webjars:bootstrap-datepicker:1.0.1'
+    implementation 'org.webjars:jquery:1.9.1'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.springframework.security:spring-security-oauth2-client'
+    implementation 'org.springframework.security:spring-security-oauth2-jose'
 
 
-dependencies {
-    compile 'javax.servlet:jstl'
-    compile 'org.webjars:bootstrap:3.3.6'
-    compile 'org.webjars:bootstrap-datepicker:1.0.1'
-    compile 'org.webjars:jquery:1.9.1'
-    compile 'org.apache.tomcat.embed:tomcat-embed-jasper'
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.springframework.boot:spring-boot-starter-security'
-    compile 'org.springframework.boot:spring-boot-starter-web'
     runtime 'org.springframework.boot:spring-boot-devtools'
     runtime 'mysql:mysql-connector-java'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.springframework.security:spring-security-test'
 
+}*/
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.security:spring-security-oauth2-client'
+    implementation 'org.springframework.security:spring-security-oauth2-jose'
+    implementation 'javax.servlet:jstl'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'org.webjars:bootstrap:3.3.6'
+    implementation 'org.webjars:bootstrap-datepicker:1.0.1'
+    implementation 'org.webjars:jquery:1.9.1'
+//    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtime 'mysql:mysql-connector-java'
+    runtime 'org.springframework.boot:spring-boot-devtools'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
 
-
-
-/*
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
-*/
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}

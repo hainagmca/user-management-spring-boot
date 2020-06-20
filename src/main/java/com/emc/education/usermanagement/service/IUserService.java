@@ -10,6 +10,8 @@ import java.util.Optional;
 
 public interface IUserService {
 
+    List<User> getUsers();
+
     List<User> getUsersByUser(String user);
 
     Optional<User> getUserById(long id);
