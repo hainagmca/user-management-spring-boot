@@ -58,3 +58,4 @@ fabric.properties
 /build/
 /target/
 /.idea/
+/.idea/codeStyles/
