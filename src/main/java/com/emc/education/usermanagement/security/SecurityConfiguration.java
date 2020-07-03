@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-   /* @Autowired
+   @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
             throws Exception {
         auth.inMemoryAuthentication()
@@ -18,17 +18,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .withUser("admin").password("admin")
                 .roles("USER", "ADMIN");
     }
-*/
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/login", "/h2-console/**").permitAll()
-                .antMatchers("/", "/*user*/**").access("hasRole('USER')").and()
-                .oauth2Login();
-
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests().antMatchers("/login", "/h2-console/**").permitAll()
+//                .antMatchers("/", "/*user*/**").access("hasRole('USER')").and()
+//                .oauth2Login();
+//        http.csrf().disable();
+//        http.headers().frameOptions().disable();
+//    }
 
 
 }
