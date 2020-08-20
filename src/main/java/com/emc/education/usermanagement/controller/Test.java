@@ -17,6 +17,8 @@ public class Test {
         String URL_GET_ALL = "http://localhost:8080/lab";
 
         Lab lab1 = restTemplate.getForObject("http://localhost:8080/lab/5f3d02119bb8952ab5d7c740",Lab.class);
+        http://localhost:8080/lab5f3d02119bb8952ab5d7c740
+
         System.out.print(lab1);
 
 

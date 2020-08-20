@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -23,18 +25,13 @@ public class LabsController {
 
     Logger logger = LoggerFactory.getLogger(LabsController.class);
 
-    private String backendUrl;
-
-    @Value("${resource.tasks}")
+    @Value("${resource.backend}")
     private String resource;
-    @Value("${resource.tasks}/{id}")
+    @Value("${resource.backend}/{id}")
     private String idResource;
 
     @Autowired
     private RestTemplate restTemplate;
-
-    private final String URL_GET_ID = resource + "lab/#id#";
-    private final String URL_GET_ALL = resource + "lab";
 
     @RequestMapping(value = "/list-labs", method = RequestMethod.GET)
     public String getAllLabs(ModelMap model) {
@@ -61,11 +58,13 @@ public class LabsController {
     }
     @RequestMapping(value = "/add-lab", method = RequestMethod.POST)
     public String addUser(ModelMap model, @Valid Lab lab, BindingResult result) {
-
+        System.out.println("@adduser");
         if (result.hasErrors()) {
             return "lab";
         }
 
+        restTemplate.postForObject(resource, lab, Lab.class);
+        System.out.println("exit from @adduser");
         //userService.saveUser(lab);
         return "redirect:/list-labs";
     }
@@ -77,34 +76,24 @@ public class LabsController {
 
     @RequestMapping(value = "/update-lab", method = RequestMethod.GET)
     public String showUpdateLabPage(@RequestParam String id, ModelMap model) {
-        //User user = userService.getUserById(id).get();
-        Lab lab1 = restTemplate.getForObject("http://localhost:8080/lab/5f3d02119bb8952ab5d7c740",Lab.class);
+        String URL = resource+"/"+id;
+        System.out.println("@@@@@@@@@@ showUpdateLabPage @@@@@@@@@@@"+URL);
+        Lab lab1 = restTemplate.getForObject(URL,Lab.class);
         model.put("lab", lab1);
+        System.out.println("@@@@@@@@@@ out from showUpdateLabPage @@@@@@@@@@@");
         return "lab";
     }
     @RequestMapping(value = "/update-lab", method = RequestMethod.POST)
     public String updateLab(ModelMap model, @Valid Lab lab, BindingResult result) {
-
+        String URL = resource+"/"+lab.getId();
+        System.out.println("@@@@@@@@@@ updateLab @@@@@@@@@@@ resource >>> "+URL);
         if (result.hasErrors()) {
             return "lab";
         }
+        //restTemplate.exchange(resource+"/"+lab.getId(), HttpMethod.PUT, new HttpEntity<>(lab), Lab.class, lab.getId()).getBody();
+        restTemplate.put(URL, HttpMethod.PUT, lab);
         //userService.updateUser(lab);
+        System.out.println("@@@@@@@@@@ out from updateLab @@@@@@@@@@@");
         return "redirect:/list-labs";
     }
-
-
-
-
-
-/*
-
-
-
-
-
-
-
-
-
-*/
 }
